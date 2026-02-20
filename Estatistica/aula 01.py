@@ -1,5 +1,5 @@
 import statistics as st
-lat_ms = [120, 130, 125, 130, 122, 600]
+lat_ms = [120, 130, 125, 128, 122, 600]
 
 media = st.mean(lat_ms)
 mediana = st.median(lat_ms)
