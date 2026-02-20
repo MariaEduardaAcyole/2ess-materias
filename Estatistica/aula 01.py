@@ -39,3 +39,19 @@ def resumo(x):
  }
 print("Com outlier:", resumo(com_outlier))
 print("Sem outlier:", resumo(sem_outlier))
+
+print("--- TAREFAS ---")
+
+print("ATIVIDADE 1")
+um = pd.Series([98, 105, 101, 99, 110, 500, 103, 97, 102,108], name="lat_ms")
+print("Média:", um.mean())
+print("Moda:", um.mode().tolist())
+print("Mediana:", um.median())
+print("Variância amostral:", um.var(ddof=1))
+print("DP amostral:", um.std(ddof=1)) #SIGNIFICA O (n-1) = VARIANCIA AMOSTRAL
+
+print("sla tipico maior que 120ms: ")
+if mediana < 120:
+    print("ok", mediana)
+else:
+    print("não okay", mediana)
