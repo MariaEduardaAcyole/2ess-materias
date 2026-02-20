@@ -55,3 +55,20 @@ if mediana < 120:
     print("ok", mediana)
 else:
     print("não okay", mediana)
+
+print("ATIVIDADE 2")
+import pandas as pd
+tickets = pd.Series([23, 25, 21, 20, 22, 60, 24, 23, 21, 22], name="tickets_dia")
+modas = tickets.mode().tolist()
+print("Moda(s):", modas)
+media = tickets.mean()
+mediana = tickets.median()
+print("Média:", media)
+print("Mediana:", mediana)
+tickets_sem_pico = tickets[tickets != 60]
+print("Média (sem o pico de 60):", tickets_sem_pico.mean())
+print("Mediana (sem o pico de 60):", tickets_sem_pico.median())
+var_amostral = tickets.var(ddof=1)
+dp_amostral = tickets.std(ddof=1)
+print("Variância amostral (ddof=1):", var_amostral)
+print("DP amostral (ddof=1):", dp_amostral)
